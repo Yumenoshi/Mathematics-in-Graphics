@@ -35,6 +35,7 @@ void ProgramMPGK::stworzenieOkna(int argc, char** argv)
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowSize(szerokoscOkna, wysokoscOkna);
 	glutInitWindowPosition(polozenieOknaX, polozenieOknaY);
+	glewExperimental = GLU_TRUE;
 	glutInitContextVersion(3, 3);
 	glutInitContextProfile(GLUT_CORE_PROFILE);
 	glutCreateWindow("Program");
