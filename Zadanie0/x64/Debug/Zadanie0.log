@@ -1,0 +1,3 @@
+﻿  Program.cpp
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie0\program.cpp(244): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+  Zadanie0.vcxproj -> E:\Studia\Matma w grafice\Mathematics-in-Graphics\x64\Debug\Zadanie0.exe

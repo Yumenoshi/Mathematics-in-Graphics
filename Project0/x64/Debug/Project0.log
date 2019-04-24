@@ -1,5 +1,7 @@
 ﻿  Program.cpp
-c:\users\student\desktop\maths\mathematics-in-graphics\project0\program.cpp(223): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+e:\studia\matma w grafice\mathematics-in-graphics\project0\program.cpp(223): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+  Source.cpp
+  Generating Code...
 Program.obj : error LNK2019: unresolved external symbol __imp_glewInit referenced in function "public: void __cdecl ProgramMPGK::inicjalizacjaGlew(void)" (?inicjalizacjaGlew@ProgramMPGK@@QEAAXXZ)
 Program.obj : error LNK2019: unresolved external symbol __imp_glewGetErrorString referenced in function "public: void __cdecl ProgramMPGK::inicjalizacjaGlew(void)" (?inicjalizacjaGlew@ProgramMPGK@@QEAAXXZ)
 Program.obj : error LNK2019: unresolved external symbol __imp_glewGetString referenced in function "public: void __cdecl ProgramMPGK::sprawdzenieWersji(void)" (?sprawdzenieWersji@ProgramMPGK@@QEAAXXZ)
@@ -45,4 +47,4 @@ Program.obj : error LNK2001: unresolved external symbol __imp___glewGenVertexArr
 Program.obj : error LNK2001: unresolved external symbol __imp_glewExperimental
 ..\Lib\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
 ..\Lib\freeglut.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-C:\Users\student\Desktop\Maths\Mathematics-in-Graphics\x64\Debug\Schema0.exe : fatal error LNK1120: 43 unresolved externals
+E:\Studia\Matma w grafice\Mathematics-in-Graphics\x64\Debug\Schema0.exe : fatal error LNK1120: 43 unresolved externals

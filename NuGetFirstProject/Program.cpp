@@ -98,12 +98,15 @@ void ProgramMPGK::stworzenieVAO()
 void ProgramMPGK::stworzenieVBO()
 {
 	GLfloat wierzcholki[] = {
-		-0.4f, -0.4f, 0.0f, 1.0f,
-		1.0f,  0.0f, 0.0f, 1.0f,
+		-0.4f, -0.4f, 0.0f, 1.0f,//wierzcholek
+		1.0f,  0.0f, 0.0f, 1.0f,//jego kolor
+		
 		0.4f, -0.4f, 0.4f, 1.0f,
 		0.0f,  1.0f, 0.0f, 1.0f,
+		
 		-0.4f,  0.4f, 0.0f, 1.0f,
 		0.0f,  0.0f, 1.0f, 1.0f,
+		
 		0.4f,  0.4f, 0.0f, 1.0f,
 		0.5f,  0.5f, 0.0f, 1.0f
 	};
