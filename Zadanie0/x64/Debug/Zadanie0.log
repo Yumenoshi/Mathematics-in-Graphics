@@ -1,3 +1,5 @@
 ﻿  Program.cpp
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie0\program.cpp(244): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
-  Zadanie0.vcxproj -> E:\Studia\Matma w grafice\Mathematics-in-Graphics\x64\Debug\Zadanie0.exe
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie0\program.cpp(68): warning C4838: conversion from 'double' to 'GLint' requires a narrowing conversion
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie0\program.cpp(64): warning C4244: 'initializing': conversion from 'double' to 'GLint', possible loss of data
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie0\program.cpp(66): warning C4244: 'initializing': conversion from 'double' to 'GLint', possible loss of data
+  Zadanie0.vcxproj -> C:\Users\student\Desktop\Nowy folder\Mathematics-in-Graphics\x64\Debug\Zadanie0.exe
