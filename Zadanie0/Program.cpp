@@ -60,9 +60,16 @@ void  ProgramMPGK::wyswietl()
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	GLint rotacja15[] = {
+		cos(15),0,sin(15),0,
+		0,1,0,0
+		-sin(15),0,cos(15),0,
+		0,0,0,1
+	};
 	static GLfloat zmiana = 0.0f;
 	zmiana += 0.0005f;
 	glUniform1f(zmiennaShader, abs(sinf(zmiana)));//Wielkoœæ obiektu do shadera
+	//glUniformMatrix4fv(rotacja15, 1, GL_FALSE, NULL);
 
 	
 
@@ -240,15 +247,28 @@ GLuint ProgramMPGK::dodanieDoProgramu(GLuint programZShaderami, const GLchar * t
 		exit(0);
 	}
 
-	const GLchar * tekstShaderaTab[1];
-	tekstShaderaTab[0] = tekstShadera;
-	GLint dlugoscShadera[1];
-	dlugoscShadera[0] = strlen(tekstShadera);
-	glShaderSource(shader, 1, tekstShaderaTab, dlugoscShadera);
+	const GLchar * tekstShaderaTab[50];
+	GLint dlugoscShadera[50];
+	int ilosclinii = 0;
+	int znakiWLinii = 0;
+	for (int i = 0; i < strlen(tekstShadera); i++) {
+		tekstShaderaTab[ilosclinii] += tekstShadera[i];
+		znakiWLinii++;
+		if (tekstShadera[i] == '\n') {
+			dlugoscShadera[ilosclinii] = znakiWLinii;
+			ilosclinii++;
+			znakiWLinii = 0;
+		}
+
+	}
+
+	//dlugoscShadera[0] = strlen(tekstShadera);
+	glShaderSource(shader, ilosclinii, tekstShaderaTab, dlugoscShadera);
 
 	glCompileShader(shader);
 	GLint kompilacjaOK = 0;
 	glGetShaderiv(shader, GL_COMPILE_STATUS, &kompilacjaOK);
+	
 	if (kompilacjaOK == GL_FALSE)
 	{
 		GLint dlugoscLoga = 0;

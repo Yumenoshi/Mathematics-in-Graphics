@@ -3,8 +3,9 @@
 			layout(location=1) in vec4 kolorVS;
 			out vec4 kolorFS;
 			uniform float zmianaShader;
+			uniform mat4 matrix;
 			void main()
 			{
-			gl_Position = vec4(zmianaShader * polozenie.x, zmianaShader * polozenie.y, zmianaShader * polozenie.z, polozenie.w);
+			gl_Position =matrix* vec4(zmianaShader * polozenie.x, zmianaShader * polozenie.y, zmianaShader * polozenie.z, polozenie.w);
 			kolorFS = kolorVS;
 			}
