@@ -1,8 +1,8 @@
 ﻿  Program.cpp
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(80): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(81): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(82): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(83): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\program.cpp(109): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\program.cpp(294): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(84): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(85): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(86): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(87): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(140): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\program.cpp(337): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
   Zadanie1.vcxproj -> E:\Studia\Matma w grafice\Mathematics-in-Graphics\x64\Debug\Zadanie1.exe

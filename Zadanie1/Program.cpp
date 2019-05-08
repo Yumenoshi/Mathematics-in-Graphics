@@ -104,41 +104,127 @@ void ProgramMPGK::stworzenieVAO()
 
 void ProgramMPGK::stworzenieVBO()
 {
-	Wektor WektoryWierzcholkow[30] = {
-		
+	const int iloscWierzcholkow = 36;
+	Wektor WektoryWierzcholkow[iloscWierzcholkow] = {
+		//Wzorzec
+		/*
+		-++
+		-+-
+		--+
+		---
+		//
+		-+-
+		++-
+		---
+		+--
+		//
+		++-
+		+++
+		+--
+		+-+
+		//
+		-++
+		+++
+		--+
+		+-+
+		//
+		-++
+		+++
+		-+-
+		++-
+		//
+		--+
+		+-+
+		---
+		+--
+
+		*/
+		//
+		Wektor(-0.4f, 0.4f, 0.4f, 1.0f),
+		Wektor(-0.4f, 0.4f, -0.4f, 1.0f),
+		Wektor(-0.4f,  -0.4f, 0.4f, 1.0f),
+		Wektor(-0.4f,  -0.4f, -0.4f, 1.0f),
+		//
+		Wektor(-0.4f, 0.4f, -0.4f, 1.0f),
+		Wektor(0.4f, 0.4f, -0.4f, 1.0f),
+		Wektor(-0.4f,  -0.4f, -0.4f, 1.0f),
+		Wektor(0.4f,  -0.4f, -0.4f, 1.0f),
+		//
+		Wektor(0.4f, 0.4f, -0.4f, 1.0f),
+		Wektor(0.4f, 0.4f, 0.4f, 1.0f),
+		Wektor(0.4f,  -0.4f, -0.4f, 1.0f),
+		Wektor(0.4f,  -0.4f, 0.4f, 1.0f),
+		//
+		Wektor(-0.4f, 0.4f, 0.4f, 1.0f),
+		Wektor(0.4f, 0.4f, 0.4f, 1.0f),
+		Wektor(-0.4f,  -0.4f, 0.4f, 1.0f),
+		Wektor(0.4f,  -0.4f, 0.4f, 1.0f),
+		//
+		Wektor(-0.4f, 0.4f, 0.4f, 1.0f),
+		Wektor(0.4f, 0.4f, 0.4f, 1.0f),
+		Wektor(-0.4f,  0.4f, -0.4f, 1.0f),
+		Wektor(0.4f,  0.4f, -0.4f, 1.0f),
+		//
+		Wektor(-0.4f, -0.4f, 0.4f, 1.0f),
+		Wektor(0.4f, -0.4f, 0.4f, 1.0f),
+		Wektor(-0.4f,  -0.4f, -0.4f, 1.0f),
+		Wektor(0.4f,  -0.4f, -0.4f, 1.0f),
+	};
+	Wektor WektoryKolorow[iloscWierzcholkow] = {
+		//
+		Wektor(1.0f, 0.0f, 0.0f, 1.0f),
+		Wektor(1.0f, 0.0f, 0.0f, 1.0f),
+		Wektor(1.0f, 0.0f, 0.0f, 1.0f),
+		Wektor(1.0f, 0.0f, 0.0f, 1.0f),
+		//
+		Wektor(0.0f,1.0f, 0.0f, 1.0f),
+		Wektor(0.0f,1.0f, 0.0f, 1.0f),
+		Wektor(0.0f,1.0f, 0.0f, 1.0f),
+		Wektor(0.0f,1.0f, 0.0f, 1.0f),
+		//
+		Wektor(0.0f,0.0f, 1.0f, 1.0f),
+		Wektor(0.0f,0.0f, 1.0f, 1.0f),
+		Wektor(0.0f,0.0f, 1.0f, 1.0f),
+		Wektor(0.0f,0.0f, 1.0f, 1.0f),
+		//
+		Wektor(1.0f,0.0f, 1.0f, 1.0f),
+		Wektor(1.0f,0.0f, 1.0f, 1.0f),
+		Wektor(1.0f,0.0f, 1.0f, 1.0f),
+		Wektor(1.0f,0.0f, 1.0f, 1.0f),
+		//
+		Wektor(1.0f,1.0f, 0.0f, 1.0f),
+		Wektor(1.0f,1.0f, 0.0f, 1.0f),
+		Wektor(1.0f,1.0f, 0.0f, 1.0f),
+		Wektor(1.0f,1.0f, 0.0f, 1.0f),
+		//
+		Wektor(1.0f,1.0f, 1.0f, 1.0f),
+		Wektor(1.0f,1.0f, 1.0f, 1.0f),
+		Wektor(1.0f,1.0f, 1.0f, 1.0f),
+		Wektor(1.0f,1.0f, 1.0f, 1.0f),
 	};
 
-	GLfloat wierzcholki[] = {
+	//Stwórz tablicê wierzcholki
+	GLfloat wierzcholki[iloscWierzcholkow*2*4];
+	GLint licznik = 0;
+	for (int i = 0;i < iloscWierzcholkow;i++) {
+			wierzcholki[licznik] = WektoryWierzcholkow[i].getX();
+			licznik+=1;
+			wierzcholki[licznik] = WektoryWierzcholkow[i].getY();
+			licznik += 1;
+			wierzcholki[licznik] = WektoryWierzcholkow[i].getZ();
+			licznik += 1;
+			wierzcholki[licznik] = WektoryWierzcholkow[i].getW();
+			licznik += 1;
+			wierzcholki[licznik] = WektoryKolorow[i].getX();
+			licznik += 1;
+			wierzcholki[licznik] = WektoryKolorow[i].getY();
+			licznik += 1;
+			wierzcholki[licznik] = WektoryKolorow[i].getZ();
+			licznik += 1;
+			wierzcholki[licznik] = WektoryKolorow[i].getW();
+			licznik += 1;
 
-
-		//"przednia" sciana
-	   -0.4f, -0.4f, -0.4f, 1.0f,//wierzcholek
-	   0.0f,  0.0f, 1.0f, 1.0f,//jego kolor
-
-	   0.4f, -0.4f, -0.4f, 1.0f,
-	   0.0f,  0.0f, 1.0f, 1.0f,
-
-	   -0.4f,  0.4f, -0.4f, 1.0f,
-	   0.0f,  0.0f, 1.0f, 1.0f,
-
-	   0.4f,  0.4f, -0.4f, 1.0f,
-	   0.0f,  0.0f, 1.0f, 1.0f
-
-
-	   //"tylna" sciana
-	  -0.4f, -0.4f, 0.4f, 1.0f,//wierzcholek
-	   1.0f,  0.0f, 1.0f, 1.0f,//jego kolor
-
-	   0.4f, -0.4f, 0.4f, 1.0f,
-	   1.0f,  0.0f, 1.0f, 1.0f,
-
-	   -0.4f,  0.4f, 0.4f, 1.0f,
-	   1.0f,  0.0f, 1.0f, 1.0f,
-
-	   0.4f,  0.4f, 0.4f, 1.0f,
-	   1.0f,  0.0f, 1.0f, 1.0f
-	};
-
+	}
 
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -150,10 +236,10 @@ void ProgramMPGK::stworzenieIBO()
 {
 	GLuint indeksyTab[] = { 0,1,2, 1,2,3, //przednia sciana  
 					 4,5,6, 5,6,7, //tylna sciana
-					 1,5,3, 5,3,7, //prawa sciana 
-					 4,0,2, 4,2,6, //lewa sciana
-					 0,1,4, 4,1,5, //dolna sciana 
-					 2,3,7, 7,6,2 //gorna sciana 
+					 8,9,10, 9,10,11, //prawa sciana 
+					 12,13,14, 13,14,15, //lewa sciana
+					 16,17,18, 17,18,19, //dolna sciana 
+					 20,21,22, 21,21,23 //gorna sciana 
 	};
 
 	glGenBuffers(1, &IBO);

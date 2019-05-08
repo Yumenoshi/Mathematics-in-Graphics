@@ -1,10 +1,12 @@
 #include <iostream>
+#include <math.h>
 
 class Wektor {
 private:
 	float x, y, z, w;
 
 public:
+	//zadanie
 	Wektor(float x, float y, float z) {
 		this->x = x;
 		this->y = y;
@@ -19,7 +21,9 @@ public:
 	}
 
 	Wektor(float x, float y, float z, float w) {
-		Wektor(x, y, z);
+		this->x = x;
+		this->y = y;
+		this->z = z;
 		this->w = w;
 	}
 	Wektor(float table[]) {
@@ -111,5 +115,37 @@ public:
 	}
 	void setW(float value) {
 		this->w = value;
+	}
+	Wektor normalize() {
+		float length = getLength();
+		Wektor nowy(x / length, y / length, z / length);
+		return nowy;
+	}
+	Wektor crossProduct(const Wektor other) {//Iloczny wektorowy
+		Wektor nowy = Wektor(y*other.z-z*other.y,z*other.x-x*other.z,x*other.y -y*other.x);
+		return nowy;
+	}
+	float dotProduct(const Wektor other) {//Iloczyn skalarny
+		float wynik = x * other.x + y * other.y + z * other.z;
+		return wynik;
+	}
+	float getLength() {
+		return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
+	}
+	//w³asne
+	float operator[](int x) {
+		switch (x)
+		{
+		case 0:
+		return x;
+		case 1:
+		return y;
+		case 2:
+		return z;
+		case 3:
+		return w;
+		default:
+			break;
+		}
 	}
 };
