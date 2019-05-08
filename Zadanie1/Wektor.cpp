@@ -14,7 +14,10 @@ public:
 		this->w = 0.0;
 	}
 	Wektor() {
-		Wektor(0.0, 0.0, 0.0);
+		this->x = 0.0;
+		this->y = 0.0;
+		this->z = 0.0;
+		this->w = 0.0;
 	}
 	Wektor(float value) {
 		//???
@@ -27,7 +30,10 @@ public:
 		this->w = w;
 	}
 	Wektor(float table[]) {
-		Wektor(table[0], table[1], table[2], table[3]);
+		this->x = table[0];
+		this->y = table[1];
+		this->z = table[2];
+		this->w = table[3];
 	}
 
 	Wektor operator=(const Wektor other) {
@@ -131,21 +137,5 @@ public:
 	}
 	float getLength() {
 		return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
-	}
-	//w³asne
-	float operator[](int x) {
-		switch (x)
-		{
-		case 0:
-		return x;
-		case 1:
-		return y;
-		case 2:
-		return z;
-		case 3:
-		return w;
-		default:
-			break;
-		}
 	}
 };
