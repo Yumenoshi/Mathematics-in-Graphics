@@ -138,7 +138,7 @@ public:
 		float wynik = x * other.x + y * other.y + z * other.z;
 		return wynik;
 	}
-	int checkAngle(Wektor other) {
+	float checkAngle(Wektor other) {
 		float iloczyn = this->dotProduct(other);
 		float dlugoscThis = this->getLength();
 		float dlugoscOther = other.getLength();
