@@ -20,7 +20,10 @@ public:
 		this->w = 0.0;
 	}
 	Wektor(float value) {
-		//???
+		this->x = value;
+		this->y = value;
+		this->z = value;
+		this->w = value;
 	}
 
 	Wektor(float x, float y, float z, float w) {
@@ -134,6 +137,13 @@ public:
 	float dotProduct(const Wektor other) {//Iloczyn skalarny
 		float wynik = x * other.x + y * other.y + z * other.z;
 		return wynik;
+	}
+	int checkAngle(Wektor other) {
+		float iloczyn = this->dotProduct(other);
+		float dlugoscThis = this->getLength();
+		float dlugoscOther = other.getLength();
+		float cosA = iloczyn / (dlugoscThis*dlugoscOther);
+		return acos(cosA);
 	}
 	float getLength() {
 		return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));

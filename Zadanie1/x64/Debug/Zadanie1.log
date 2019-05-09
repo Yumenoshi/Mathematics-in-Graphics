@@ -1,8 +1,13 @@
-﻿  Program.cpp
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(84): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(85): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(86): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(87): warning C4552: '*': result of expression not used
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(140): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\program.cpp(337): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
-  Zadanie1.vcxproj -> E:\Studia\Matma w grafice\Mathematics-in-Graphics\x64\Debug\Zadanie1.exe
+﻿  Wektor.cpp
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(93): warning C4552: '*': operator has no effect; expected operator with side-effect
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(94): warning C4552: '*': operator has no effect; expected operator with side-effect
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(95): warning C4552: '*': operator has no effect; expected operator with side-effect
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(96): warning C4552: '*': operator has no effect; expected operator with side-effect
+  Program.cpp
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(93): warning C4552: '*': operator has no effect; expected operator with side-effect
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(94): warning C4552: '*': operator has no effect; expected operator with side-effect
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(95): warning C4552: '*': operator has no effect; expected operator with side-effect
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(96): warning C4552: '*': operator has no effect; expected operator with side-effect
+c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\program.cpp(337): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+  Generating Code...
+  Zadanie1.vcxproj -> C:\Users\student\Desktop\Nowy folder\Mathematics-in-Graphics\x64\Debug\Zadanie1.exe
