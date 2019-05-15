@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NuGetFirstProject", "NuGetF
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie0", "Zadanie0\Zadanie0.vcxproj", "{B437002E-00A3-4EB3-BB3A-3B1A16F441D1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie1", "Zadanie1\Zadanie1.vcxproj", "{804EF04B-4DBF-4F72-A865-E870AD2DB72E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zadanie1 and 2", "Zadanie1\Zadanie1.vcxproj", "{804EF04B-4DBF-4F72-A865-E870AD2DB72E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,7 +36,6 @@ Global
 		{B488981D-DCE4-4AF9-8A55-FF1CA7FDD063}.Release|x86.ActiveCfg = Release|Win32
 		{B488981D-DCE4-4AF9-8A55-FF1CA7FDD063}.Release|x86.Build.0 = Release|Win32
 		{5E3EDA48-7A92-4B59-A874-044E42DFD66A}.Debug|x64.ActiveCfg = Debug|x64
-		{5E3EDA48-7A92-4B59-A874-044E42DFD66A}.Debug|x64.Build.0 = Debug|x64
 		{5E3EDA48-7A92-4B59-A874-044E42DFD66A}.Debug|x86.ActiveCfg = Debug|x64
 		{5E3EDA48-7A92-4B59-A874-044E42DFD66A}.Debug|x86.Build.0 = Debug|x64
 		{5E3EDA48-7A92-4B59-A874-044E42DFD66A}.Release|x64.ActiveCfg = Release|x64
@@ -44,7 +43,6 @@ Global
 		{5E3EDA48-7A92-4B59-A874-044E42DFD66A}.Release|x86.ActiveCfg = Release|Win32
 		{5E3EDA48-7A92-4B59-A874-044E42DFD66A}.Release|x86.Build.0 = Release|Win32
 		{B437002E-00A3-4EB3-BB3A-3B1A16F441D1}.Debug|x64.ActiveCfg = Debug|x64
-		{B437002E-00A3-4EB3-BB3A-3B1A16F441D1}.Debug|x64.Build.0 = Debug|x64
 		{B437002E-00A3-4EB3-BB3A-3B1A16F441D1}.Debug|x86.ActiveCfg = Debug|Win32
 		{B437002E-00A3-4EB3-BB3A-3B1A16F441D1}.Debug|x86.Build.0 = Debug|Win32
 		{B437002E-00A3-4EB3-BB3A-3B1A16F441D1}.Release|x64.ActiveCfg = Release|x64

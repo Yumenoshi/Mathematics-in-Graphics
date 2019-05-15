@@ -21,6 +21,9 @@
     <ClCompile Include="Wektor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Macierz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Program.h">
