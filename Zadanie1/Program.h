@@ -38,4 +38,6 @@ public:
 	void stworzenieProgramu();
 	GLuint dodanieDoProgramu(GLuint programZShaderami, const char * tekstShadera, GLenum typShadera);
 	void sprawdzenieWersji();
+	float naStopnie(float radiany);
+	float naRadiany(float stopnie);
 };

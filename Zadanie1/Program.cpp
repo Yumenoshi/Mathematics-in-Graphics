@@ -1,5 +1,6 @@
 #include "Program.h"
 #include "Wektor.cpp"
+# define M_PI           3.14159265358979323846  /* pi */
 
 GLuint ProgramMPGK::VAO;
 GLuint ProgramMPGK::VBO;
@@ -9,6 +10,13 @@ GLuint ProgramMPGK::programZShaderami;
 GLuint ProgramMPGK::vertexShaderId;
 GLuint ProgramMPGK::fragmentShaderId;
 GLint ProgramMPGK::zmiennaShader;
+
+float ProgramMPGK::naStopnie(float radiany) {
+	return radiany * (180 / M_PI);
+}
+float ProgramMPGK::naRadiany(float stopnie) {
+	return stopnie * (M_PI / 180);
+}
 
 ProgramMPGK::ProgramMPGK(void)
 {

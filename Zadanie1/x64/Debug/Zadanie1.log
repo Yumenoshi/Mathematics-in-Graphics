@@ -1,13 +1,13 @@
-﻿  Wektor.cpp
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(93): warning C4552: '*': operator has no effect; expected operator with side-effect
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(94): warning C4552: '*': operator has no effect; expected operator with side-effect
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(95): warning C4552: '*': operator has no effect; expected operator with side-effect
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(96): warning C4552: '*': operator has no effect; expected operator with side-effect
-  Program.cpp
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(93): warning C4552: '*': operator has no effect; expected operator with side-effect
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(94): warning C4552: '*': operator has no effect; expected operator with side-effect
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(95): warning C4552: '*': operator has no effect; expected operator with side-effect
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\wektor.cpp(96): warning C4552: '*': operator has no effect; expected operator with side-effect
-c:\users\student\desktop\nowy folder\mathematics-in-graphics\zadanie1\program.cpp(337): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+﻿  Program.cpp
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(93): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(94): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(95): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(96): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\program.cpp(337): warning C4267: '=': conversion from 'size_t' to 'GLint', possible loss of data
+  Wektor.cpp
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(93): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(94): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(95): warning C4552: '*': result of expression not used
+e:\studia\matma w grafice\mathematics-in-graphics\zadanie1\wektor.cpp(96): warning C4552: '*': result of expression not used
   Generating Code...
-  Zadanie1.vcxproj -> C:\Users\student\Desktop\Nowy folder\Mathematics-in-Graphics\x64\Debug\Zadanie1.exe
+  Zadanie1.vcxproj -> E:\Studia\Matma w grafice\Mathematics-in-Graphics\x64\Debug\Zadanie1.exe
