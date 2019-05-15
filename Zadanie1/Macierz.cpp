@@ -135,6 +135,24 @@ public:
 		}
 		return *this;
 	}
+	Macierz operator*(const float other) {
+		Macierz nowy = Macierz(length);
+		for (int i = 0;i < length;i++) {
+			for (int j = 0;j < length;j++) {
+				nowy.table[i][j] = this->table[i][j] * other;
+			}
+		}
+		return nowy;
+	}
+
+	Macierz operator*=(const float other) {
+		for (int i = 0;i < length;i++) {
+			for (int j = 0;j < length;j++) {
+				this->table[i][j] *= other;
+			}
+		}
+		return *this;
+	}
 	Macierz operator*(const Macierz other) {
 		if (this->length != other.length)
 		{
@@ -208,10 +226,46 @@ public:
 			}
 		*this = nowy;
 	}
-	float det() {//Wyznacznik macierzy
 
+	float det(float ** a,int n=3) {//Wyznacznik macierzy
+		float det = 0;
+		float ** submatrix = new float*[n];
+		for (int i = 0; i < n; ++i)
+			submatrix[i] = new float[n];
+		if (n == 2)
+			return ((a[0][0] * a[1][1]) - (a[1][0] * a[0][1]));
+		else {
+			for (int x = 0; x < n; x++) {
+				int subi = 0;
+				for (int i = 1; i < n; i++) {
+					int subj = 0;
+					for (int j = 0; j < n; j++) {
+						if (j == x)
+							continue;
+						submatrix[subi][subj] = a[i][j];
+						subj++;
+					}
+					subi++;
+				}
+				det = det + (pow(-1, x) * a[0][x] * this->det(submatrix, n - 1));
+			}
+		}
+		return det;
 	}
-	void invertMatrix() {//Obracanie macierzy
 
-	}
+	//??????
+	/*Macierz inverseMatrix() {//Obracanie macierzy
+		Macierz nowy = Macierz(this->length);
+		float det = this->det(this->getTable,length);
+		if (det == 0)
+			throw "Wyznacznik równy zero, macierz osobliwa, obracanie niemo¿liwe";
+		float a = 1 / det;
+		for (int i = 0;i < length;i++) {
+			for (int j = 0;j < length;j++) {
+				//nowy.table[i][j]=1/det*
+			}
+		}
+
+		return nowy;
+	}*/
 };
