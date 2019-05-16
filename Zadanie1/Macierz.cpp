@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 
 class Macierz {
 private:
@@ -7,22 +8,61 @@ private:
 	int length;
 	void remakeTable(int length) {
 		this->length = length;
-		float** table = new float*[length];
+		table = new float*[length];
 		for (int i = 0; i < length; ++i)
 			table[i] = new float[length];
 	}
+	void fillTable(float value) {
+		for (int i = 0; i < length; i++) {
+			for (int j = 0; j < length; j++) {
+				table[i][j] = value;
+			}
+		}
+	}
+	void odwracanie(float **& A, int & n)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = n; j < n; j++)
+			{
+				A[i][j] = 0;
+			}
+		}
+		for (int i = 0; i < n; i++)
+		{
+			A[i][n + i] = 1;
+		}
+		for (int s = 0; s < n; s++)
+		{
+			float c;
+			c = A[s][s];
+			A[s][s] = A[s][s] - 1;
+			for (int j = s; j < 2 * n; j++)
+			{
+				float d;
+				d = A[s][j] / c;
+				for (int i = 0; i < n; i++)
+				{
+					A[i][j] = A[i][j] - d * A[i][s];
+				}
+			}
+		}
+
+	}
+
 
 public:
 	Macierz(int length = 3) {
 		remakeTable(length);
+		fillTable(0.0);
 	}
 	Macierz(float value,int length=3) {
 		remakeTable(length);
-
+		fillTable(value);
 	}
 	Macierz(float table[3][3]) {
 		length = 3;
-		float** table = new float*[length];
+		this->table = new float*[length];
 		for (int i = 0; i < length; ++i) {
 			this->table[i] = new float[length];
 			for (int j = 0; j < length;j++) {
@@ -34,7 +74,7 @@ public:
 
 	Macierz(float table[4][4]) {
 		length = 4;
-		float** table = new float*[length];
+		this->table = new float*[length];
 		for (int i = 0; i < length; ++i) {
 			this->table[i] = new float[length];
 			for (int j = 0; j < length;j++) {
@@ -177,10 +217,10 @@ public:
 	}
 	friend std::ostream& operator<<(std::ostream& os, const Macierz& dt)
 	{
-		for (i = 0; i < dt->length; i++)
+		for (int i = 0; i < dt.length; i++)
 		{
-			for (j = 0; j < dt->length; j++)
-				os << dt->table[i][j] << "  ";
+			for (int j = 0; j < dt.length; j++)
+				os <<std::setw(5)<< dt.table[i][j]<<std::setw(5);
 			os << "\n";
 		}
 		return os;
@@ -253,19 +293,10 @@ public:
 		return det;
 	}
 
-	//??????
-	/*Macierz inverseMatrix() {//Obracanie macierzy
-		Macierz nowy = Macierz(this->length);
-		float det = this->det(this->getTable,length);
-		if (det == 0)
-			throw "Wyznacznik równy zero, macierz osobliwa, obracanie niemo¿liwe";
-		float a = 1 / det;
-		for (int i = 0;i < length;i++) {
-			for (int j = 0;j < length;j++) {
-				//nowy.table[i][j]=1/det*
-			}
-		}
 
+	Macierz inverseMatrix() {//Obracanie macierzy
+		Macierz nowy = Macierz(this->length);
+		nowy.getTable = odwracanie(this->getTable, this->length);
 		return nowy;
-	}*/
+	}
 };

@@ -1,5 +1,6 @@
 #include "Program.h"
 #include "Wektor.cpp"
+#include "Macierz.cpp"
 # define M_PI           3.14159265358979323846  /* pi */
 
 GLuint ProgramMPGK::VAO;
@@ -380,6 +381,12 @@ void ProgramMPGK::sprawdzenieWersji()
 
 int main(int argc, char** argv)
 {
+	float mac[3][3] = { {1.0/3.0,2.0,3.0},{1.0,2.0,3.0},{4.0,0.0,0.0} };
+	Macierz m1 = Macierz(mac);
+	Macierz m2 = Macierz(2.0,3);
+
+	std::cout << m1 * m2;
+
 	ProgramMPGK obiektMPGK(786, 786, 100, 100);
 
 	obiektMPGK.stworzenieOkna(argc, argv);
