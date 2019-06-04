@@ -294,9 +294,9 @@ public:
 	}
 
 
-	Macierz inverseMatrix() {//Obracanie macierzy
+	Macierz inverseMatrix() {//Odwracanie macierzy
 		Macierz nowy = Macierz(this->length);
-		nowy.getTable = odwracanie(this->getTable, this->length);
+		odwracanie(this->table, this->length);
 		return nowy;
 	}
 };
