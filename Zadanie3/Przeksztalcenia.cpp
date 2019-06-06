@@ -55,32 +55,32 @@ public:
 		wynik.getTable()[2][2] = 1.0f;
 		return wynik;
 	}
-	Macierz macierzObrotu4x4(float kat,char axis) 
+	Macierz macierzObrotu4x4(float radian,char axis) 
 	{
 		Macierz wynik;
 		wynik = Macierz(4);
 		if (axis == 'x') {
 			wynik.getTable()[0][0] = 1.0f;
-			wynik.getTable()[1][1] = cos(kat);
-			wynik.getTable()[1][2] = -1 * sin(kat);
-			wynik.getTable()[2][1] = sin(kat);
-			wynik.getTable()[2][2] = cos(kat);
+			wynik.getTable()[1][1] = cos(radian);
+			wynik.getTable()[1][2] = -1 * sin(radian);
+			wynik.getTable()[2][1] = sin(radian);
+			wynik.getTable()[2][2] = cos(radian);
 			wynik.getTable()[3][3] = 1.0f;
 		}
 		else if (axis == 'y') {
 			wynik.getTable()[1][1] = 1.0f;
-			wynik.getTable()[0][0] = cos(kat);
-			wynik.getTable()[2][0] = -1 * sin(kat);
-			wynik.getTable()[0][2] = sin(kat);
-			wynik.getTable()[2][2] = cos(kat);
+			wynik.getTable()[0][0] = cos(radian);
+			wynik.getTable()[2][0] = -1 * sin(radian);
+			wynik.getTable()[0][2] = sin(radian);
+			wynik.getTable()[2][2] = cos(radian);
 			wynik.getTable()[3][3] = 1.0f;
 		}
 		else if (axis == 'z') {
 			wynik.getTable()[2][2] = 1.0f;
-			wynik.getTable()[0][0] = cos(kat);
-			wynik.getTable()[0][1] = -1 * sin(kat);
-			wynik.getTable()[1][2] = sin(kat);
-			wynik.getTable()[1][1] = cos(kat);
+			wynik.getTable()[0][0] = cos(radian);
+			wynik.getTable()[0][1] = -1 * sin(radian);
+			wynik.getTable()[1][2] = sin(radian);
+			wynik.getTable()[1][1] = cos(radian);
 			wynik.getTable()[3][3] = 1.0f;
 		}
 		return wynik;

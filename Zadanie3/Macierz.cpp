@@ -214,7 +214,7 @@
 		for (int i = 0; i < dt.length; i++)
 		{
 			for (int j = 0; j < dt.length; j++)
-				os <<std::setw(5)<< dt.table[i][j]<<std::setw(5);
+				os <<std::setw(10)<< dt.table[i][j]<<std::setw(10);
 			os << "\n";
 		}
 		return os;

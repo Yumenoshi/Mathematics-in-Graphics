@@ -380,21 +380,26 @@ void ProgramMPGK::sprawdzenieWersji()
 
 int main(int argc, char** argv)
 {
+
+	ProgramMPGK obiektMPGK(786, 786, 100, 100);
+
 	float mac[3][3] = { {1.0/3.0,2.0,3.0},{1.0,2.0,3.0},{4.0,0.0,0.0} };
 	Macierz m1 = Macierz(mac);
 	Macierz m2 = Macierz(2.0,3);
 
 	Przeksztalcenia w;
 	Macierz skalowania = w.macierzSkalowania(2.0f);
-	Macierz obrotu = w.macierzObrotu3x3(0.5f);
+	Macierz obrotu = w.macierzObrotu3x3(obiektMPGK.naRadiany(0.5f));
 	Macierz przesuniecia = w.macierzTranslacji(0.7);
 
 	std::cout << m1 * m2;
+	std::cout << std::endl;
 	std::cout << m1 * skalowania;
+	std::cout << std::endl;
 	std::cout << m1 * obrotu;
+	std::cout << std::endl;
 	std::cout << m1 * przesuniecia;
-
-	ProgramMPGK obiektMPGK(786, 786, 100, 100);
+	std::cout << std::endl;
 
 	obiektMPGK.stworzenieOkna(argc, argv);
 	obiektMPGK.inicjalizacjaGlew();
